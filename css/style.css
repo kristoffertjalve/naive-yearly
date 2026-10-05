@@ -1,0 +1,57 @@
+@font-face {font-family:"Junicode Two";src:url("../fonts/JunicodeTwoBeta-Condensed.ttf") format("truetype");font-weight:400;font-style:normal;font-display:optional;}
+@font-face {font-family:"Junicode Two";src:url("../fonts/JunicodeTwoBeta-Italic.ttf") format("truetype");font-weight:400;font-style:italic;font-display:optional;}
+:root {--orange:#f04e23;--paper:#eeeeed;--white:#fffaf7;--border:1px solid var(--orange);}
+* {box-sizing:border-box;}
+html {scrollbar-gutter:stable;}
+body {margin:0;padding:16px 20px 26px;background:var(--paper);color:var(--orange);font-family:"Junicode Two","Times New Roman",serif;font-weight:400;}
+a {color:inherit;}
+.site-nav {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:var(--border);height:48px;position:relative;z-index:2;}
+.site-nav>a,.nav-tba summary {display:flex;align-items:center;justify-content:center;height:100%;font:400 29px/1 "Junicode Two","Times New Roman",serif;text-decoration:none;}
+.site-nav>a,.nav-tba {border-right:var(--border);}
+.site-nav>:last-child {border-right:0;}
+.site-nav>a:hover,.site-nav>a.active,.nav-tba:hover summary,.nav-tba[open] summary {background:var(--orange);color:var(--white);}
+.nav-tba {position:relative;min-width:0;}
+.nav-tba summary {list-style:none;cursor:pointer;}
+.nav-tba summary::-webkit-details-marker {display:none;}
+.nav-tba .tba-note {display:block!important;visibility:hidden;position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);padding:7px 18px;background:var(--paper);border:var(--border);font-size:22px;pointer-events:none;}
+.nav-tba:hover .tba-note,.nav-tba:focus-within .tba-note,.nav-tba[open] .tba-note {visibility:visible;}
+.site-nav a:focus-visible,.nav-tba summary:focus-visible {outline:2px solid var(--orange);outline-offset:-4px;}
+.hero {position:relative;min-height:605px;display:flex;flex-direction:column;justify-content:center;border:var(--border);border-top:0;background:var(--paper);color:var(--orange);padding:90px 12.5%;}
+.hero-copy {position:relative;}
+.hero-kicker {margin:0 0 4px;font-size:clamp(30px,3vw,48px);line-height:1;}
+.hero-title {margin:0;font-size:clamp(76px,7.7vw,126px);font-weight:400;line-height:.95;letter-spacing:-2px;}
+.hero-meta {margin:42px 0 0;font-size:25px;line-height:1.45;}
+.newsletter {display:grid;grid-template-columns:1fr 52%;gap:20px;align-items:center;padding:20px 0 15px;}
+.newsletter p {margin:0;font-size:29px;}
+.newsletter form {display:grid;grid-template-columns:minmax(0,1fr) 173px;gap:10px;}
+.newsletter input:not([type=hidden]),.newsletter button {width:100%;min-width:0;height:58px;border:var(--border);border-radius:0;background:transparent;color:var(--orange);font:inherit;font-size:29px;padding:0 18px;}
+.newsletter input::placeholder {color:var(--orange);opacity:1;}
+.newsletter button {background:var(--orange);color:var(--white);cursor:pointer;}
+.newsletter button:hover {background:transparent;color:var(--orange);}
+.site-footer {position:relative;background:var(--orange);color:var(--white);min-height:760px;padding:38px 38px 200px;}
+.footer-intro {max-width:1160px;font-size:clamp(32px,4.4vw,70px);line-height:1.08;}
+.footer-info {display:grid;grid-template-columns:195px 240px minmax(0,1fr);gap:42px;margin-top:78px;font-size:29px;line-height:1.04;}
+.footer-info p {margin:0 0 30px;}
+.footer-logo {position:absolute;right:55px;bottom:45px;width:260px;}
+.footer-logo img {display:block;width:100%;height:auto;}
+@media(max-width:1000px) {
+.newsletter {grid-template-columns:1fr;gap:12px;}
+.footer-info {grid-template-columns:1fr 1fr;gap:25px;}
+.collaborators {grid-column:1/-1;}
+}
+@media(max-width:600px) {
+body {padding:8px;}
+.site-nav {height:44px;}
+.site-nav>a,.nav-tba summary {font-size:21px;}
+.hero {min-height:520px;padding:65px 25px;}
+.hero-title {font-size:clamp(58px,14vw,84px);letter-spacing:-1px;}
+.hero-kicker {font-size:30px;}
+.hero-meta {font-size:23px;margin-top:35px;}
+.newsletter p {font-size:24px;}
+.newsletter form {grid-template-columns:minmax(0,1fr) 110px;gap:8px;}
+.newsletter input:not([type=hidden]),.newsletter button {font-size:22px;padding:0 10px;height:50px;}
+.site-footer {min-height:0;padding:28px 22px 185px;}
+.footer-intro {font-size:34px;}
+.footer-info {margin-top:45px;font-size:23px;grid-template-columns:1fr 1fr;gap:20px;}
+.footer-logo {width:210px;right:24px;bottom:28px;}
+}
