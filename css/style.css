@@ -128,3 +128,76 @@ body {padding:8px;}
 @media (max-width: 360px) {
     .footer-info { grid-template-columns: minmax(0, 1fr); }
 }
+
+
+/* Memories is shown in place of the hero, with one shared footer. */
+[hidden] { display: none !important; }
+.memories {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    height: calc(100vh - 76px);
+    height: calc(100svh - 76px);
+    min-height: 0;
+    border: var(--border);
+    border-top: 0;
+}
+.memory-list {
+    min-height: 0;
+    overflow-y: auto;
+    padding: clamp(20px, 4svh, 48px) clamp(16px, 2vw, 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.memory-table { width: 100%; border-collapse: collapse; font-size: 21px; line-height: 1.12; }
+.memory-table th { text-align: left; font-style: italic; font-weight: 400; padding: 0 10px 18px 0; }
+.memory-table td { vertical-align: top; padding: 3px 10px 3px 0; }
+.memory-table .year { width: 48px; }
+.memory-published { margin: auto 0 0; font-size: 21px; font-style: italic; }
+.memory-photo {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    border-left: var(--border);
+    border-radius: 0;
+    background: var(--orange) url("../images/meg miller.jpg") center/cover no-repeat;
+    cursor: pointer;
+}
+.memory-photo:focus-visible { outline: 3px solid var(--white); outline-offset: -6px; }
+@media (max-width: 850px) {
+    .memories { height: auto; grid-template-columns: minmax(0, 1fr); }
+    .memory-list { overflow: visible; }
+    .memory-table { font-size: 21px; }
+    .memory-table td { overflow-wrap: anywhere; }
+    .memory-published { margin-top: 20px; }
+    .memory-photo { height: 55svh; min-height: 280px; border-left: 0; border-top: var(--border); }
+}
+
+/* Program and RSVP placeholders share the home box dimensions. */
+.placeholder-view {
+    height: calc(100vh - 76px);
+    height: calc(100svh - 76px);
+    border: var(--border);
+    border-top: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    overflow: auto;
+}
+.placeholder-view h1 {
+    margin: 0;
+    font-family: "Junicode Two", "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(44px, min(7.7vw, 15svh), 126px);
+    line-height: 1;
+}
+@media (max-width: 600px) {
+    .placeholder-view { height: calc(100vh - 60px); height: calc(100svh - 60px); }
+}
+
+.memory-table a { text-decoration: none; }
+.memory-table a:hover { text-decoration: underline; }
+.memory-table a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }

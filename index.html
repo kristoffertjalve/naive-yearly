@@ -28,16 +28,16 @@
 
 <header>
     <nav class="site-nav" aria-label="Main navigation">
-        <a href="./" class="active" aria-current="page">home</a>
-        <details class="nav-tba"><summary title="TBA">program</summary><span class="tba-note">TBA</span></details>
-        <a href="https://naive-yearly.are.na/" target="_blank" rel="noopener noreferrer" aria-label="Memories (opens in a new tab)" class="">memories</a>
-        <details class="nav-tba"><summary title="TBA">RSVP</summary><span class="tba-note">TBA</span></details>
+        <a href="#home" class="active" aria-current="page" data-view="home">home</a>
+        <a href="#program" data-view="program">program</a>
+        <a href="#memories" data-view="memories">memories</a>
+        <a href="#rsvp" data-view="rsvp">RSVP</a>
     </nav>
 </header>
 
 <main>
 
-<section class="hero" aria-label="Naive Yearly, Athens, April 15–17, 2027">
+<section id="home" class="hero" aria-label="Naive Yearly, Athens, April 15–17, 2027">
     <div class="hero-copy">
         <p class="hero-kicker">Room for the</p>
         <h1 class="hero-title">quiet, odd, &amp;<br>poetic web</h1>
@@ -45,6 +45,47 @@
     <p class="hero-meta">Athens, Greece<br>April 15–17, 2027</p>
 </section>
 
+<section id="memories" class="memories" aria-label="Memories" hidden>
+    <div class="memory-list">
+        <table class="memory-table">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Speaker</th>
+                    <th>Talk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="year">2024</td><td><a href="https://tiger.exposed/" target="_blank" rel="noopener noreferrer">Tiger Dingsun</a></td><td><a href="https://www.are.na/editorial/the-end-is-not-the-end" target="_blank" rel="noopener noreferrer">The End is Not the End</a></td></tr>
+                <tr><td>2024</td><td><a href="https://kimkleinert.com/" target="_blank" rel="noopener noreferrer">Kim Kleinert</a></td><td><a href="https://www.are.na/editorial/on-contamination" target="_blank" rel="noopener noreferrer">On Contamination</a></td></tr>
+                <tr><td>2024</td><td><a href="https://agnescameron.info/" target="_blank" rel="noopener noreferrer">Agnes Cameron</a></td><td><a href="https://www.are.na/editorial/what-can-an-image-do" target="_blank" rel="noopener noreferrer">What Can an Image Do?</a></td></tr>
+                <tr><td>2024</td><td><a href="https://loom.cafe/" target="_blank" rel="noopener noreferrer">Daniel Murray</a></td><td><a href="https://www.are.na/editorial/electric-myths" target="_blank" rel="noopener noreferrer">Electric Myths</a></td></tr>
+                <tr><td>2024</td><td><a href="https://reubenson.com/" target="_blank" rel="noopener noreferrer">Reuben Son</a></td><td><a href="https://www.are.na/editorial/quiet-time" target="_blank" rel="noopener noreferrer">Quiet Time</a></td></tr>
+                <tr><td>2024</td><td><a href="https://alienmelon.com/" target="_blank" rel="noopener noreferrer">Nathalie Lawhead</a></td><td>Inventing tools</td></tr>
+                <tr><td>2024</td><td><a href="https://www.charmaineli.ca/" target="_blank" rel="noopener noreferrer">Charmaine Li</a></td><td><a href="https://www.are.na/editorial/wading-through-dreams" target="_blank" rel="noopener noreferrer">Wading Through Dreams</a></td></tr>
+                <tr><td>2024</td><td><a href="https://kaloyankolev.com/" target="_blank" rel="noopener noreferrer">Kaloyan Kolev</a></td><td><a href="https://www.are.na/editorial/the-confiscation-of-digital-memory" target="_blank" rel="noopener noreferrer">The Confiscation of Digital Memory</a></td></tr>
+                <tr><td>2024</td><td><a href="https://vidarucli.com/" target="_blank" rel="noopener noreferrer">Vida Rucli</a></td><td><a href="https://www.are.na/editorial/meandering-through-the-sites-of-naive-yearly" target="_blank" rel="noopener noreferrer">Meandering Through</a></td></tr>
+                <tr><td>2023</td><td><a href="https://everythingi.love/" target="_blank" rel="noopener noreferrer">Chia Amisola</a></td><td><a href="https://naive-yearly.are.na/2024/chia-amisola" target="_blank" rel="noopener noreferrer">Domain Naming</a></td></tr>
+                <tr><td>2023</td><td><a href="https://www.bnjmnearl.eu/" target="_blank" rel="noopener noreferrer">Benjamin Earl</a></td><td><a href="https://naive-yearly.are.na/2024/benjamin-earl" target="_blank" rel="noopener noreferrer">Coding in Situ</a></td></tr>
+                <tr><td>2023</td><td><a href="https://mayaontheinter.net/" target="_blank" rel="noopener noreferrer">Maya Man</a></td><td><a href="https://naive-yearly.are.na/2024/maya-man" target="_blank" rel="noopener noreferrer">I’m Feeling Lucky: A Eulogy</a></td></tr>
+                <tr><td>2023</td><td><a href="https://poolsuite.net/" target="_blank" rel="noopener noreferrer">Marty Bell</a></td><td><a href="https://naive-yearly.are.na/2024/marty-bell" target="_blank" rel="noopener noreferrer">20 Years on the World Wide Web</a></td></tr>
+                <tr><td>2023</td><td><a href="https://aliceyuanzhang.com/" target="_blank" rel="noopener noreferrer">Alice Yuan Zhang</a></td><td><a href="https://naive-yearly.are.na/2024/alice-yuan-zhang" target="_blank" rel="noopener noreferrer">Tracing the Source</a></td></tr>
+                <tr><td>2023</td><td><a href="https://tiana.computer/" target="_blank" rel="noopener noreferrer">Tiana Dueck</a></td><td><a href="https://naive-yearly.are.na/2024/tiana-dueck" target="_blank" rel="noopener noreferrer">Algae Cottage</a></td></tr>
+                <tr><td>2023</td><td><a href="https://elliott.computer/" target="_blank" rel="noopener noreferrer">Elliott Cost</a></td><td><a href="https://naive-yearly.are.na/2024/elliott-cost" target="_blank" rel="noopener noreferrer">Dots in Motion</a></td></tr>
+                <tr><td>2023</td><td><a href="https://laurelschwulst.com/" target="_blank" rel="noopener noreferrer">Laurel Schwulst</a></td><td><a href="https://naive-yearly.are.na/2024/laurel-schwulst" target="_blank" rel="noopener noreferrer">On Eggs</a></td></tr>
+            </tbody>
+        </table>
+
+        <p class="memory-published">
+            Published in collaboration with <a href="https://are.na" target="_blank" rel="noopener noreferrer">Are.na</a>
+        </p>
+    </div>
+
+    <button type="button" class="memory-photo" aria-label="Event photo 1 of 5. Show next photo." title="Click to see the next photo"></button>
+</section>
+
+<section id="program" class="placeholder-view" aria-label="Program" hidden><h1>TBA</h1></section>
+<section id="rsvp" class="placeholder-view" aria-label="RSVP" hidden><h1>TBA</h1></section>
 </main>
 
 <section class="newsletter">
@@ -83,7 +124,10 @@
     <div class="footer-logo"><img src="images/naive-yearly-white-logo.png" alt="Naive Yearly"></div>
 </footer>
 
+<script src="js/memories.js" defer></script>
+<script src="js/navigation.js" defer></script>
 </body>
     <!-- Trigger a fresh deployment -->
 </html>
+
 
