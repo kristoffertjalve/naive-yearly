@@ -201,3 +201,38 @@ body {padding:8px;}
 .memory-table a { text-decoration: none; }
 .memory-table a:hover { text-decoration: underline; }
 .memory-table a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+
+/* Personal flower stamps, underneath the home text. */
+.hero { isolation: isolate; cursor: url("../favicon.png") 32 32, crosshair; }
+.stamp-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }
+.flower-stamp {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    transform: translate(-50%, -50%) rotate(var(--rotation));
+    user-select: none;
+}
+.hero-copy, .hero-meta { pointer-events: none; }
+.clear-stamps {
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    border: var(--border);
+    border-radius: 0;
+    padding: 6px 12px;
+    background: var(--paper);
+    color: var(--orange);
+    font: 400 20px/1.2 "Junicode Two", "Times New Roman", serif;
+    cursor: pointer;
+}
+.clear-stamps:hover { background: var(--orange); color: var(--white); }
+.clear-stamps:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+
+.stamp-controls { position:absolute; bottom:18px; right:20px; display:flex; gap:8px; z-index:2; }
+.stamp-controls button {
+    position:static; border:var(--border); border-radius:0;
+    padding:6px 12px; background:var(--paper); color:var(--orange);
+    font:400 20px/1.2 "Junicode Two", "Times New Roman", serif; cursor:pointer;
+}
+.stamp-controls button:hover { background:var(--orange); color:var(--white); }
+.stamp-controls button:focus-visible { outline:2px solid var(--orange); outline-offset:3px; }
