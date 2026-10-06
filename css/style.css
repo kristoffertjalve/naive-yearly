@@ -236,3 +236,9 @@ body {padding:8px;}
 }
 .stamp-controls button:hover { background:var(--orange); color:var(--white); }
 .stamp-controls button:focus-visible { outline:2px solid var(--orange); outline-offset:3px; }
+
+/* Give speaker and talk columns more space on phones. */
+@media (max-width: 600px) {
+    .memory-table th:first-child,
+    .memory-table td:first-child { display: none; }
+}
