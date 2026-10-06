@@ -55,3 +55,33 @@ body {padding:8px;}
 .footer-info {margin-top:45px;font-size:23px;grid-template-columns:1fr 1fr;gap:20px;}
 .footer-logo {width:210px;right:24px;bottom:28px;}
 }
+
+/* Keep the navigation and home box within the first viewport. */
+.hero {
+    min-height: 0;
+    height: calc(100vh - 76px);
+    height: calc(100svh - 76px);
+    padding: clamp(18px, 5vh, 70px) 12.5%;
+    overflow: auto;
+}
+.hero-kicker { font-size: clamp(24px, min(3vw, 6svh), 48px); }
+.hero-title { font-size: clamp(44px, min(7.7vw, 15svh), 126px); }
+.hero-meta {
+    margin-top: clamp(16px, 5svh, 42px);
+    font-size: clamp(19px, min(2.5vw, 4.5svh), 25px);
+}
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+.site-footer a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.footer-logo { width: 170px; }
+@media (max-width: 600px) {
+    .hero {
+        height: calc(100vh - 60px);
+        height: calc(100svh - 60px);
+        padding: clamp(18px, 5svh, 55px) 25px;
+    }
+    .hero-title { font-size: clamp(40px, min(14vw, 14svh), 84px); letter-spacing: -1px; }
+    .hero-kicker { font-size: clamp(23px, min(7vw, 6svh), 30px); }
+    .hero-meta { font-size: clamp(18px, 4.5svh, 23px); }
+    .footer-logo { width: 150px; }
+}
