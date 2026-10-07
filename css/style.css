@@ -242,3 +242,14 @@ body {padding:8px;}
     .memory-table th:first-child,
     .memory-table td:first-child { display: none; }
 }
+
+
+/* Keep mobile navigation visible only within the active first box. */
+@media (max-width: 600px) {
+    .first-box > header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: var(--paper);
+    }
+}
