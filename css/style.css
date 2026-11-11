@@ -244,14 +244,12 @@ body {padding:8px;}
 }
 
 
-/* Keep mobile navigation visible only within the active first box. */
-@media (max-width: 600px) {
-    .first-box > header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        background: var(--paper);
-    }
+/* Keep navigation sticky within the first box on all screen sizes. */
+.first-box > header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--paper);
 }
 
 
