@@ -326,3 +326,76 @@ body { padding-top: 64px; }
     .rsvp-tickets { font-size: 27px; }
     .rsvp-flower { max-width: 27vw; }
 }
+
+/* Program: three equal day columns, following the supplied schedule layout. */
+.program-view {
+    height: calc(100vh - 76px);
+    height: calc(100svh - 76px);
+    min-height: 0;
+    border: var(--border);
+    border-top: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: auto;
+}
+.program-day {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: clamp(18px, 2.4vw, 40px) clamp(14px, 1.6vw, 28px) clamp(22px, 3vw, 48px);
+}
+.program-day + .program-day { border-left: var(--border); }
+.program-date {
+    margin: 0;
+    font-style: italic;
+    font-size: clamp(19px, 1.75vw, 27px);
+    line-height: 1.1;
+}
+.program-day h2 {
+    margin: 0;
+    font-size: clamp(37px, 3.7vw, 60px);
+    font-weight: 400;
+    line-height: 1;
+}
+.program-day-main {
+    margin-top: clamp(24px, 3svh, 50px);
+}
+.program-day-main,
+.program-day-bottom {
+    font-size: clamp(23px, 2.45vw, 40px);
+    line-height: 1.06;
+}
+.program-day-main p,
+.program-day-bottom p { margin: 0; }
+.program-day h3 {
+    margin: 0 0 8px;
+    font: inherit;
+}
+.program-speakers {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.program-speakers span { text-decoration: underline; text-underline-offset: 2px; }
+.program-day-bottom { margin-top: auto; }
+@media (max-width: 700px) {
+    .program-view {
+        height: auto;
+        min-height: calc(100svh - 60px);
+        grid-template-columns: 1fr;
+        overflow: visible;
+    }
+    .program-day {
+        min-height: 280px;
+        padding: 24px 20px 28px;
+    }
+    .program-day + .program-day {
+        border-left: 0;
+        border-top: var(--border);
+    }
+    .program-day h2 { font-size: clamp(43px, 10vw, 60px); }
+    .program-date { font-size: 23px; }
+    .program-day-main, .program-day-bottom { font-size: clamp(28px, 6.8vw, 38px); }
+    .program-day-main { margin-top: 24px; }
+    .program-day-bottom { margin-top: 48px; }
+}
