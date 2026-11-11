@@ -303,6 +303,9 @@ body { padding-top: 64px; }
     white-space: nowrap;
 }
 .rsvp-prices p { margin: 0; }
+.rsvp-prices a { color: inherit; text-decoration: none; }
+.rsvp-prices a:hover { text-decoration: underline; text-underline-offset: 2px; }
+.rsvp-prices a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 .rsvp-description {
     margin: 0;
     text-align: center;
