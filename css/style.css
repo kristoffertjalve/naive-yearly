@@ -403,5 +403,8 @@ body { padding-top: 64px; }
     .program-date { font-size: 23px; }
     .program-day-main, .program-day-bottom { font-size: clamp(28px, 6.8vw, 38px); }
     .program-day-main { margin-top: 24px; }
-    .program-day-bottom { margin-top: 48px; }
+    .program-day-bottom { margin-top: 32px; }
+    .program-day:nth-child(-n+2) { min-height: 0; }
+    .program-day:nth-child(-n+2) .program-day-bottom { margin-top: 32px; }
+    .program-speakers li:not(:has(a)) { text-decoration: none; }
 }
