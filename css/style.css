@@ -378,9 +378,11 @@ body { padding-top: 64px; }
 }
 .program-speakers a {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 2px;
 }
+.program-speakers a:hover { text-decoration: underline; }
+.program-speakers a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 .program-day-bottom { margin-top: auto; }
 @media (max-width: 700px) {
     .program-view {
