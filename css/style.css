@@ -286,16 +286,19 @@ body { padding-top: 64px; }
     justify-content: center;
     align-items: center;
     gap: clamp(28px, 4vw, 60px);
+    font-size: clamp(38px, 4.7vw, 60px);
 }
 .rsvp-flower {
     display: block;
-    width: clamp(105px, 12vw, 150px);
-    height: auto;
-    flex: 0 0 auto;
+    height: 3em;
+    width: auto;
+    max-width: 35vw;
+    object-fit: contain;
+    flex: 0 1 auto;
 }
 .rsvp-prices {
     font-style: italic;
-    font-size: clamp(38px, 4.7vw, 60px);
+    font-size: 1em;
     line-height: 1;
     white-space: nowrap;
 }
@@ -314,12 +317,12 @@ body { padding-top: 64px; }
     }
     .rsvp-content { gap: 42px; }
     .rsvp-tickets { gap: clamp(12px, 3vw, 24px); }
-    .rsvp-flower { width: clamp(72px, 21vw, 115px); }
-    .rsvp-prices { font-size: clamp(28px, 7vw, 40px); }
+    .rsvp-tickets { font-size: clamp(28px, 7vw, 40px); }
+    .rsvp-flower { max-width: 30vw; }
     .rsvp-description { font-size: clamp(19px, 5vw, 24px); }
 }
 @media (max-width: 360px) {
     .rsvp-tickets { gap: 10px; }
-    .rsvp-flower { width: 62px; }
-    .rsvp-prices { font-size: 27px; }
+    .rsvp-tickets { font-size: 27px; }
+    .rsvp-flower { max-width: 27vw; }
 }
