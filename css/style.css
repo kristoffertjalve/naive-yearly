@@ -244,8 +244,8 @@ body {padding:8px;}
 }
 
 
-/* Keep navigation sticky within the first box on all screen sizes. */
-.first-box > header {
+/* Keep navigation visible while scrolling the entire page. */
+.site-header {
     position: sticky;
     top: 0;
     z-index: 10;
