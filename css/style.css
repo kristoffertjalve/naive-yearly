@@ -244,12 +244,20 @@ body {padding:8px;}
 }
 
 
-/* Keep navigation visible while scrolling the entire page. */
+/* Keep navigation pinned to the viewport across every section. */
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    position: fixed;
+    top: 16px;
+    left: 20px;
+    right: 20px;
+    z-index: 100;
     background: var(--paper);
+}
+/* Reserve the header's original space in the normal page flow. */
+body { padding-top: 64px; }
+@media (max-width: 600px) {
+    .site-header { top: 8px; left: 8px; right: 8px; }
+    body { padding-top: 52px; }
 }
 
 
